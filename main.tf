@@ -3,9 +3,6 @@ terraform {
     aws = {
 	  source = "hashicorp/aws"
 	  }
-	  random = {
-	    source = "hashicopr/random"
-	  }
 	}
 	backend "remote" {
     organization = "AWSTerraform433"
@@ -16,10 +13,7 @@ terraform {
   }
 }
 
-# random provider
-provider "random" {}
-
-# provider us-east-1
+# provider us-east-1 region
 provider "aws" {
     region = "us-east-1"
 }
